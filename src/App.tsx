@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { useMoralis } from "react-moralis";
+import Room from './Room';
 
 function App() {
 
@@ -35,9 +36,10 @@ function App() {
 
   return (
     <div>
-      <h1>Moralis Hello World!</h1>
+      <h1>Welcome to Junction!</h1>
       <button onClick={login} disabled={isAuthenticated}>Moralis Metamask Login</button>
       <button onClick={logOut} disabled={!isAuthenticated}>Logout</button>
+      <Room />
     </div>
   );
 }
