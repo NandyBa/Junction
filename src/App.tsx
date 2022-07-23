@@ -37,8 +37,8 @@ function App() {
   return (
     <div>
       <h1>Welcome to Junction!</h1>
-      <button onClick={login} disabled={isAuthenticated}>Moralis Metamask Login</button>
-      <button onClick={logOut} disabled={!isAuthenticated}>Logout</button>
+      <button onClick={login} style={{display:!isAuthenticated ? 'block' : 'none'}}>Moralis Metamask Login</button>
+      <button onClick={logOut} style={{display:isAuthenticated ? 'block' : 'none'}}>Logout</button>
       <Room />
     </div>
   );
