@@ -2,7 +2,7 @@ import React from "react";
 import "./index.css";
 import App from "./App";
 import Explore from './Explore';
-import Home from './Home';
+//import Home from './Home';
 import reportWebVitals from "./reportWebVitals";
 import { MoralisProvider } from "react-moralis";
 import { createRoot } from 'react-dom/client';
