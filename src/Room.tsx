@@ -14,7 +14,7 @@ function Room() {
 
   const { authenticate, isAuthenticated, isAuthenticating, user, account, logout, enableWeb3, provider, web3} = useMoralis();
 
-  const handleClick = async () => {
+  const Sign_message = async () => {
     const title = (document.getElementById('Title') as HTMLInputElement)!.value;
     const token0 = (document.getElementById('Token0') as HTMLInputElement)!.value;
     const token1 = (document.getElementById('Token1') as HTMLInputElement)!.value;
@@ -33,17 +33,6 @@ function Room() {
 
   const onSearch = (value: string) => console.log(value);
 
-  const Sign_message = async() => {
-    await enableWeb3();
-    //const { provider } = useMoralis();
-    const message = "Hello world!"
-
-
-    
-    console.log(provider);
-    
-  }
-
   return (
     <div style={{display:isAuthenticated ? 'block' : 'none'}} className="App">
       <Row justify="start">
@@ -52,7 +41,7 @@ function Room() {
           <Search id="Token0" placeholder="Address token0" onSearch={onSearch} style={{ width: 200 }} />
           <Search id="Token1" placeholder="Address token1" onSearch={onSearch} style={{ width: 200 }} />
           <TextArea id="description" rows={10} placeholder="Proposal description" />
-          <Button type="primary" onClick={handleClick}>Submit</Button>
+          <Button type="primary" onClick={Sign_message}>Submit</Button>
         </Col>
       </Row>
     </div>
