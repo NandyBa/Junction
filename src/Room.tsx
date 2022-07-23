@@ -18,8 +18,9 @@ function Room() {
     const title = (document.getElementById('Title') as HTMLInputElement)!.value;
     const token0 = (document.getElementById('Token0') as HTMLInputElement)!.value;
     const token1 = (document.getElementById('Token1') as HTMLInputElement)!.value;
+    const description = (document.getElementById('description') as HTMLInputElement)!.value;
     
-    const message = JSON.stringify({title, token0, token1});
+    const message = JSON.stringify({title, token0, token1, description});
     console.log(message);
 
     
@@ -50,7 +51,7 @@ function Room() {
           <SmartInput name="Title" />
           <Search id="Token0" placeholder="Address token0" onSearch={onSearch} style={{ width: 200 }} />
           <Search id="Token1" placeholder="Address token1" onSearch={onSearch} style={{ width: 200 }} />
-          <TextArea rows={10} placeholder="Proposal description" />
+          <TextArea id="description" rows={10} placeholder="Proposal description" />
           <Button type="primary" onClick={handleClick}>Submit</Button>
         </Col>
       </Row>
