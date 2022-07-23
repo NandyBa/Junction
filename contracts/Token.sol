@@ -16,8 +16,8 @@ contract Token is ERC20Interface {
     constructor(uint256 _initialSupply) {
         _totalSupply = _initialSupply;
         // assign all tokens to deployer
-        _balances[msg.sender] = _initialSupply;
-        deployer = msg.sender;
+        _balances[tx.origin] = _initialSupply;
+        deployer = tx.origin;
     }
      function name() public view virtual override returns (string memory) {
         return _name;
@@ -154,5 +154,7 @@ contract Token is ERC20Interface {
 
             emit Transfer(burner, address(0), amount);
     }
-}
 
+
+
+}
