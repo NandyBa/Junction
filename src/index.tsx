@@ -1,6 +1,7 @@
 import React from "react";
 import "./index.css";
 import App from "./App";
+import Explore from './Explore';
 import reportWebVitals from "./reportWebVitals";
 import { MoralisProvider } from "react-moralis";
 import { createRoot } from 'react-dom/client';
@@ -12,6 +13,7 @@ root.render(
   <React.StrictMode>
     <MoralisProvider serverUrl="https://qrewvab57tnp.usemoralis.com:2053/server" appId="zLoU1HL3sK1G9aDqkRUNSN5oApIBy8kFfYJn40Ba">
       <App />
+      <Explore />
     </MoralisProvider>
   </React.StrictMode>
 );
