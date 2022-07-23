@@ -20,7 +20,7 @@ function Room() {
     const token1 = (document.getElementById('Token1') as HTMLInputElement)!.value;
     const description = (document.getElementById('description') as HTMLInputElement)!.value;
     
-    const message = JSON.stringify({title, token0, token1, description});
+    const message = JSON.stringify({title, token0, token1, 'user': user!.get("ethAddress"), description});
     console.log(message);
 
     
@@ -28,6 +28,13 @@ function Room() {
     const signature = await signer.signMessage(message);
 
     console.log(signature);
+
+    const checkAddress = ethers.utils.verifyMessage(message, signature).toLowerCase();
+
+
+    const messageArray = JSON.parse(message)
+    console.log(checkAddress == messageArray['user'])
+    console.log(checkAddress, messageArray['user']);
   }
 
 
