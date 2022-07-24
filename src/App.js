@@ -29,7 +29,7 @@ const Rooter = () => {
         <div className="demo-nav">
           <Link to="/" style={{'margin':'20px'}}>Home</Link>
           <Link to="/explore" style={{'margin':'20px'}}>Explore</Link>
-          <Link to="/room" style={{'margin':'20px'}}>Create merge</Link>
+          <Link to="/merge-room" style={{'margin':'20px'}}>Create merge</Link>
           <a onClick={logOut} style={{'margin':'20px'}}>Logout</a>
         </div>
         <Routes>
