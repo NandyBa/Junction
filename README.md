@@ -39,4 +39,7 @@ Required fiels are:
 # Whitepaper:
 [Junction, the web3 M&A Protocol.pdf](https://github.com/NandyBa/Junction/files/9175528/Junction.the.web3.M.A.Protocol.pdf)
 
+# Presentation:
+[Powerpoint presentation.pdf](Junction%20powerpoint%20presentation.pdf)
+
 	
