@@ -14,6 +14,8 @@ Proposal public proposal;
 Token token_a;
 Token token_b; 
 
+address public new_dao; 
+
 constructor(address _admin, address source_dao, address target_dao, address source_token_holder, string memory _description){
     admin = _admin; 
     proposal.status = Status.SUBMITTED;
@@ -61,6 +63,10 @@ function set_target_token_holder() public override {
 /* returns the status of the proposal*/
 function get_proposal_status() public view returns (uint256) {
     return uint256(proposal.status); 
+}
+
+function get_new_dao_address() public view returns (address) {
+    return new_dao; 
 }
 /* this functions verifies that at least 50% of the tokens of each DAO are locked/pledged during the funding period
 */
@@ -196,7 +202,7 @@ function execute() public ifDealOngoing adminOnly override returns (bool) {
 
     proposal.status = Status.COMPLETED; // change proposal status to complete  
 
-    emit DoneDeal(address(newDAO)); 
+    new_dao = address(newDAO); 
 
     return true; 
     } 
