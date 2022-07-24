@@ -42,4 +42,8 @@ Required fiels are:
 # Presentation:
 [Powerpoint presentation.pdf](Junction%20powerpoint%20presentation.pdf)
 
+
+## Deployed on IPFS using Fleek
+![Capture d’écran 2022-07-24 à 12.42.48.png](Capture d’écran 2022-07-24 à 12.42.48.png)
+
 	
