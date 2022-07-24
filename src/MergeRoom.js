@@ -1,5 +1,5 @@
 import React, { useEffect, useState, FC } from 'react';
-import { useHistory } from 'react-dom/client';
+import {useNavigate} from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 import 'antd/dist/antd.css';
@@ -19,6 +19,8 @@ function MergeRoom() {
   const [state, setState ] = useState({});
 
   const { save } = useNewMoralisObject("Proposal_Inter_DAO"); // To save proposal
+
+  const navigate = useNavigate();
 
   const Sign_message = async () => {
     const title = (document.getElementById('Title')).value;
@@ -54,8 +56,7 @@ function MergeRoom() {
           // Execute any logic that should take place after the object is saved.
           alert("New object created with objectId: " + proposal.id);
 
-          let history = useHistory();
-          history.push('/all-proposals');
+          navigate('/all-proposals');
         },
         onError: (error) => {
           // Execute any logic that should take place if the save fails.

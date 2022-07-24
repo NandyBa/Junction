@@ -29,7 +29,14 @@ const Rooter = () => {
       </div>
     );
     
-  }else{
+  }
+  else if (!isAuthenticated) {
+    return (
+      <Login/>
+    );
+    
+  }
+  else{
 
     return (
       <div className="demo">
