@@ -1,4 +1,5 @@
 import React, { useEffect, useState, FC } from 'react';
+import { useHistory } from 'react-dom/client';
 import logo from './logo.svg';
 import './App.css';
 import 'antd/dist/antd.css';
@@ -52,6 +53,9 @@ function MergeRoom() {
         onSuccess: (proposal) => {
           // Execute any logic that should take place after the object is saved.
           alert("New object created with objectId: " + proposal.id);
+
+          let history = useHistory();
+          history.push('/all-proposals');
         },
         onError: (error) => {
           // Execute any logic that should take place if the save fails.

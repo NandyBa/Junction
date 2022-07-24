@@ -19,10 +19,16 @@ const Rooter = () => {
     console.log("logged out");
   };
 
-  if (!isAuthenticated) {
+  console.log();
+
+  if (!isAuthenticated && location.pathname == '/') {
     return (
-      <Login/>
-    )
+      <div>
+        <Login/>
+        <Home/>
+      </div>
+    );
+    
   }else{
 
     return (
