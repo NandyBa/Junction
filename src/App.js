@@ -34,7 +34,7 @@ const Rooter = () => {
         </div>
         <Routes>
           <Route path="/explore" element={<Explore/>} />
-          <Route path="/room" element={<MergeRoom/>} />
+          <Route path="/merge-room" element={<MergeRoom/>} />
           <Route path="*" element={<Home/>} />
         </Routes>
       </div>
