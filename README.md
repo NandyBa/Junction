@@ -44,6 +44,6 @@ Required fiels are:
 
 
 ## Deployed on IPFS using Fleek
-![Capture d’écran 2022-07-24 à 12.42.48.png](Capture d’écran 2022-07-24 à 12.42.48.png)
+![IPFS_deployment.png](IPFS_deployment.png)
 
 	
