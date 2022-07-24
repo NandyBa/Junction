@@ -6,6 +6,7 @@ import Home from './Home';
 import MergeRoom from './MergeRoom';
 import Login from './Login';
 import Explore from './Explore';
+import ShowProposals from './ShowProposals';
 
 const Rooter = () => {
   const location = useLocation();
@@ -30,11 +31,13 @@ const Rooter = () => {
           <Link to="/" style={{'margin':'20px'}}>Home</Link>
           <Link to="/explore" style={{'margin':'20px'}}>Explore</Link>
           <Link to="/merge-room" style={{'margin':'20px'}}>Create merge</Link>
+          <Link to="/all-proposals" style={{'margin':'20px'}}>Proposals</Link>
           <a onClick={logOut} style={{'margin':'20px'}}>Logout</a>
         </div>
         <Routes>
           <Route path="/explore" element={<Explore/>} />
           <Route path="/merge-room" element={<MergeRoom/>} />
+          <Route path="/all-proposals" element={<ShowProposals/>} />
           <Route path="*" element={<Home/>} />
         </Routes>
       </div>
