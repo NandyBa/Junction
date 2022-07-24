@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { useMoralis } from "react-moralis";
-import Room from './Room';
 import { Button, Row, Col, Layout, Menu } from 'antd';
 
 const { Header, Content, Footer } = Layout;
@@ -44,7 +43,7 @@ function Login() {
 					Login with your Web3 wallet
 				</Button>
 				<Button
-					key="1"
+					key="2"
 					type="primary"
 					size="large"
 					onClick={logOut}
