@@ -1,4 +1,4 @@
-A Decentralized M&A Protocol 
+# A Decentralized M&A Protocol 
 
 DAO to DAO merge framework powered by sequential bargaining
 Select, Bargain, Merge.
@@ -9,11 +9,19 @@ The possiblity are limitless, doing that with more than 2 communities, doing tha
 We can use a dispute resolution system, Kleros, to prevent / solve not planned issues.
 	
 
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Demo vidéo
+
+[![Demo - Junction, decentralized Merger and Acquisition protocol](https://img.youtube.com/vi/FhxaFlWCv-Q/0.jpg)](https://www.youtube.com/watch?v=FhxaFlWCv-Q)
+
+👆 Click on the image to start the video
+
+[![Junction Smart contract demo](https://img.youtube.com/vi/ExkmAGSCshg/0.jpg)](https://www.youtube.com/watch?v=ExkmAGSCshg)
+
+👆 Click on the image to start the video
+
+## Run scripts
 
 In the project directory, you can run:
 
