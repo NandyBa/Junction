@@ -4,6 +4,11 @@ DAO to DAO merge framework powered by sequential bargaining
 Select, Bargain, Merge.
 Stronger Together 
 
+The possiblity are limitless, doing that with more than 2 communities, doing that in a cross chain way on different blockchain. Or could applied itself on Multisig usecases for example with Gnosis Safe on Gnosis Chain. Today our protocol MVP is compatible with every EVM chain, polygon, Celo, cronos, Gnosis chain, Cosmos, Ethereum. Merger and acquisition are a way to make other communities and guild to come on their blockchain.
+
+We can use a dispute resolution system, Kleros, to prevent / solve not planned issues.
+	
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -33,9 +38,7 @@ Required fiels are:
 	- DAO 1 blockchain
 	- Proposal description
 	
-	
 
-	
 # Whitepaper:
 [Junction, the web3 M&A Protocol.pdf](https://github.com/NandyBa/Junction/files/9175528/Junction.the.web3.M.A.Protocol.pdf)
 
