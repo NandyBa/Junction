@@ -54,6 +54,15 @@ We can use a dispute resolution system, Kleros, to prevent / solve not planned i
 - DAO C: 0xA12B4cB6915e5C236a4FB09cB12d130C06ACC4b8
 
 
+## Whitepaper:
+[Junction, the web3 M&A Protocol.pdf](https://github.com/NandyBa/Junction/files/9175528/Junction.the.web3.M.A.Protocol.pdf)
+
+## Presentation:
+[Powerpoint presentation.pdf](Junction%20powerpoint%20presentation.pdf)
+
+
+## Deployed on IPFS using Fleek
+![IPFS_deployment.png](IPFS_deployment.png)
 
 ## Run scripts
 
@@ -79,16 +88,5 @@ Required fiels are:
 	- DAO 1 gouvernance token address
 	- DAO 1 blockchain
 	- Proposal description
-	
-
-# Whitepaper:
-[Junction, the web3 M&A Protocol.pdf](https://github.com/NandyBa/Junction/files/9175528/Junction.the.web3.M.A.Protocol.pdf)
-
-# Presentation:
-[Powerpoint presentation.pdf](Junction%20powerpoint%20presentation.pdf)
-
-
-## Deployed on IPFS using Fleek
-![IPFS_deployment.png](IPFS_deployment.png)
 
 	
