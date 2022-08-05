@@ -1,0 +1,88 @@
+/* Ant Design (antd) customizations
+
+   antd is a design library that is used to create React components.
+   The following CSS overrides ant's default values.
+*/
+
+.ant-btn-primary {
+	background-color: rgb(106, 15, 255);
+	border-color: rgb(106, 15, 255);
+	box-shadow: 5px 5px 10px 0px rgb(195, 195, 195);
+}
+
+.ant-btn-primary:hover {
+	background-color: rgb(187, 145, 255);
+	border-color: rgb(187, 145, 255);
+}
+
+/* Header design specifications */
+
+#header-container {
+  width: 100vw;
+  height: 120px;
+  display: flex;
+}
+
+	#logo-container {
+		width: 20vw;
+		display: flex;
+	}
+
+		#logo-img {
+			height: 100px;
+			width: 100px;
+			margin: 10px;
+			margin-left: 60px;
+		}
+
+		#logo-text {
+			margin: 0px;
+			padding-top: 30px;
+			font-size: 36px;
+			font-weight: bold;
+		}
+
+	#menu-container {
+		width: 60vw;
+		text-align: center;
+	}
+
+		.menu-item {
+			display: inline-block;
+			margin: 0px;
+			padding-top: 50px;
+			margin-left: 60px;
+			margin-right: 60px;
+			font-size: 18px;
+		}
+
+	#signin-container {
+		margin-top: 40px;
+		margin-right: 60px;
+	}
+
+/* Animations sourced from the internet */
+
+.hover-underline-animation {
+	display: inline-block;
+	position: relative;
+	color: #000000;
+}
+  
+.hover-underline-animation:after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	transform: scaleX(0);
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: #000000;
+	transform-origin: bottom right;
+	transition: transform 0.25s ease-out;
+}
+  
+.hover-underline-animation:hover:after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
+}

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './App.css';
+import '../app/App.css';
 import 'antd/dist/antd.css';
 import { ethers } from "ethers";
 import { useMoralis, useMoralisQuery } from "react-moralis";
