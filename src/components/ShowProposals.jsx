@@ -8,15 +8,11 @@ import { Button, Col, Divider, Row, Space, Table, Tag } from 'antd';
 
 
 const ShowProposals = () =>{
-
 	const { Moralis, user } = useMoralis();
-
 	const [Proposals, setProposals] = useState([]);
 
 	useEffect(() => {
-
 		async function fetchProposals(){
-
 			const Proposal = Moralis.Object.extend("Proposal_Inter_DAO");
 			const query = new Moralis.Query(Proposal);
 			const results = await query.find();
@@ -29,13 +25,10 @@ const ShowProposals = () =>{
 				data.push(a);
 			}
 
-			//const data = JSON.stringify(results);
 			setProposals(data);
 			return data;
-
 		}
 		fetchProposals();
-		
 	}, [])
 
 	const columns = [
@@ -51,14 +44,7 @@ const ShowProposals = () =>{
 		}
 	];
 
-	
-
-
-
-	return(
-		<Table dataSource={Proposals} columns={columns} />
-	)
-	
+	return(<Table dataSource={Proposals} columns={columns} />)
 }
 
 

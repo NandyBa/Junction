@@ -5,14 +5,14 @@ const { Option } = Select;
 
 
 const SelectBlockchain = ({placeholder, id, onChange}) => {
+	const { Moralis } = useMoralis();
 
-	const { Moralis} = useMoralis();
-
-	return (<Select placeholder={placeholder} id={id} onChange={onChange}>
-
-	            <Option value={Moralis.Chains.POLYGON_MAINNET}>Polygon</Option>
-	            <Option value={Moralis.Chains.ETH_ROPSTEN}>Ropsten</Option>
-	          </Select>)
+	return (
+		<Select placeholder={placeholder} id={id} onChange={onChange}>
+	        <Option value={Moralis.Chains.POLYGON_MAINNET}>Polygon</Option>
+	        <Option value={Moralis.Chains.ETH_ROPSTEN}>Ropsten</Option>
+        </Select>
+	)
 }
 
 export default SelectBlockchain;
