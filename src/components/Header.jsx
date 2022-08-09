@@ -1,13 +1,8 @@
 // Importing 3rd party software
-import { useMoralis } from "react-moralis";
-import { Link, Route, Routes } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 // Importing components
 import Login from './homepage/Login'
-import HomePage from './homepage/HomePage'
-import MergeRoom from './MergeRoom';
-import Explore from './Explore';
-import ShowProposals from './ShowProposals';
 
 // Importing photos
 import MandaLogoBlack from '../images/black_logo.png'

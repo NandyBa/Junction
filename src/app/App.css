@@ -2,41 +2,27 @@
 
    antd is a design library that is used to create React components.
    The following CSS overrides ant's default values.
+
+   Note that for any ANT design buttons, we need to use the !important tag to 
+   override their CSS classes.
 */
 
 .ant-btn-primary {
-	background-color: #ffffff;
-	border-color: #ffffff;
-	color: #05005b;
+	background-color: #ffffff !important;
+	border-color: #ffffff !important;
+	color: #05005b !important;
 }
 
 .ant-btn-primary:hover {
-	background-color: #05005b;
-	border-color: #ffffff;
-	color: #ffffff
+	background-color: #05005b !important;
+	border-color: #ffffff !important;
+	color: #ffffff !important;
 }
-
-/* Section One (homepage) design specifications */
-
-#section-one {
-	width: 100%;
-	height: 700px;
-	background: rgb(2,0,36);
-	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(4,0,65,1) 41%, rgba(5,0,91,1) 100%);
-}
-
-	#section-one-large-text {
-		padding-left: 80px;
-		padding-top: 90px;
-		max-width: 70%;
-		font-size: 50px;
-		color: #ffffff;
-	}
 
 /* Header design specifications */
 
 #header-container {
-	width: 100vw;
+	width: 100%;
 	height: 120px;
 	display: flex;
 	background: rgb(2,0,36);
@@ -44,7 +30,7 @@
 }
 
 	#logo-container {
-		width: 30vw;
+		width: 30%;
 		min-width: 300px;
 		display: flex;
 	}
@@ -65,26 +51,81 @@
 		}
 
 	#menu-container {
-		width: 55vw;
+		width: 55%;
 		min-width: 535px;
 		padding-right: 60px;
 		text-align: right;
 	}
 
 		.menu-item {
-			display: inline-block;
 			margin: 0px;
 			padding-top: 50px;
 			margin-left: 60px;
 			font-size: 18px;
 		}
 
+		/* Setting the hover color to white to override React CSS properties */
+		.menu-item:hover {
+			color: white;
+		}
+
 	#signin-container {
-		width: 15vw;
+		width: 15%;
 		min-width: 200px;
 		margin-top: 45px;
 		align-items: right;
 	}
+
+/* Section One (homepage) design specifications */
+
+#section-one {
+	width: 100%;
+	height: 600px;
+	background: rgb(2,0,36);
+	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(4,0,65,1) 41%, rgba(5,0,91,1) 100%);
+	padding-left: 80px;
+}
+
+	#section-one-large-text {
+		padding-top: 90px;
+		margin-bottom: 40px;
+		max-width: 60%;
+		font-size: 50px;
+		color: #ffffff;
+	}
+
+	#get-started-btn {
+		background-color: #05005b !important;
+		border-color: #ffffff !important;
+		color: #ffffff !important;
+	}
+
+	.ant-btn-primary:hover {
+		background-color: #ffffff !important;
+		border-color: #ffffff !important;
+		color: #05005b !important;
+	}
+
+	#buy-mdt-btn {
+		background-color: #d97c00 !important;
+		border-color: white !important;
+		color: white !important;
+		margin-left: 20px; 
+	}
+
+	#buy-mdt-btn:hover {
+		background-color: white !important;
+		border-color: #d97c00 !important;
+		color: #d97c00 !important;
+	}
+
+/* Section two (homepage) design specifications */
+
+#section-two {
+	background: white;
+	width: 100vw;
+	height: 600px;
+}
 
 /* Full page login design specifiation */
 
@@ -117,7 +158,7 @@
 	height: 2px;
 	bottom: 0;
 	left: 0;
-	background-color: black;
+	background-color: rgb(255, 255, 255);
 	transform-origin: bottom right;
 	transition: transform 0.25s ease-out;
 }
