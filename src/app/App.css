@@ -5,46 +5,70 @@
 */
 
 .ant-btn-primary {
-	background-color: rgb(106, 15, 255);
-	border-color: rgb(106, 15, 255);
-	box-shadow: 5px 5px 10px 0px rgb(195, 195, 195);
+	background-color: #ffffff;
+	border-color: #ffffff;
+	color: #05005b;
 }
 
 .ant-btn-primary:hover {
-	background-color: rgb(187, 145, 255);
-	border-color: rgb(187, 145, 255);
+	background-color: #05005b;
+	border-color: #ffffff;
+	color: #ffffff
 }
+
+/* Section One (homepage) design specifications */
+
+#section-one {
+	width: 100%;
+	height: 700px;
+	background: rgb(2,0,36);
+	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(4,0,65,1) 41%, rgba(5,0,91,1) 100%);
+}
+
+	#section-one-large-text {
+		padding-left: 80px;
+		padding-top: 90px;
+		max-width: 70%;
+		font-size: 50px;
+		color: #ffffff;
+	}
 
 /* Header design specifications */
 
 #header-container {
-  width: 100vw;
-  height: 120px;
-  display: flex;
+	width: 100vw;
+	height: 120px;
+	display: flex;
+	background: rgb(2,0,36);
+	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(4,0,65,1) 41%, rgba(5,0,91,1) 100%);
 }
 
 	#logo-container {
-		width: 20vw;
+		width: 30vw;
+		min-width: 300px;
 		display: flex;
 	}
 
-		#logo-img {
+		#logo-img-header {
 			height: 100px;
 			width: 100px;
 			margin: 10px;
 			margin-left: 60px;
 		}
 
-		#logo-text {
+		#logo-text-header {
 			margin: 0px;
 			padding-top: 30px;
 			font-size: 36px;
 			font-weight: bold;
+			color: white;
 		}
 
 	#menu-container {
-		width: 60vw;
-		text-align: center;
+		width: 55vw;
+		min-width: 535px;
+		padding-right: 60px;
+		text-align: right;
 	}
 
 		.menu-item {
@@ -52,21 +76,37 @@
 			margin: 0px;
 			padding-top: 50px;
 			margin-left: 60px;
-			margin-right: 60px;
 			font-size: 18px;
 		}
 
 	#signin-container {
-		margin-top: 40px;
-		margin-right: 60px;
+		width: 15vw;
+		min-width: 200px;
+		margin-top: 45px;
+		align-items: right;
 	}
+
+/* Full page login design specifiation */
+
+#fullscreen-login-container {
+	text-align: center;
+	height: 100vh;
+	padding-top: 40vh;
+	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(4,0,65,1) 41%, rgba(5,0,91,1) 100%);
+}
+
+#logo-img-fullscreen-login {
+	width: 100px;
+	height: 100px;
+	margin-bottom: 20px;
+}
 
 /* Animations sourced from the internet */
 
 .hover-underline-animation {
 	display: inline-block;
 	position: relative;
-	color: #000000;
+	color: white;
 }
   
 .hover-underline-animation:after {
@@ -77,7 +117,7 @@
 	height: 2px;
 	bottom: 0;
 	left: 0;
-	background-color: #000000;
+	background-color: black;
 	transform-origin: bottom right;
 	transition: transform 0.25s ease-out;
 }
