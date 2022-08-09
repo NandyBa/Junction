@@ -1,0 +1,134 @@
+[
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "newDAOAddress",
+				"type": "address"
+			}
+		],
+		"name": "NewDAO",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "enum SNFInterface.Status",
+				"name": "status",
+				"type": "uint8"
+			}
+		],
+		"name": "ProposalStatus",
+		"type": "event"
+	},
+	{
+		"inputs": [],
+		"name": "endFundingPeriod",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "endVestingPeriod",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "executeDeal",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "exit",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "tokenDistribution",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "fundingPeriod",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "cliffPeriod",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "vestingPeriod",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "newTokensVolume",
+				"type": "uint256"
+			},
+			{
+				"internalType": "bool",
+				"name": "deal",
+				"type": "bool"
+			}
+		],
+		"name": "fillSNFBlanks",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "fundDeal",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getCurrentFunding",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "fundingState",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getProposalStatus",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "status",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "setNegotiator",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	}
+]
