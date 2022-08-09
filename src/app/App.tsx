@@ -1,39 +1,45 @@
 import React from 'react';
-import { HashRouter, Route, Routes, useLocation } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import { useMoralis } from "react-moralis";
 
 // Importing components
 import Header from '../components/Header'
-import FullscreenLogin from '../components/FullscreenLogin'
 import Explore from '../components/Explore'
 import MergeRoom from '../components/MergeRoom'
 import ShowProposals from '../components/ShowProposals'
 import HomePage from '../components/homepage/HomePage'
 
 const Router = () => {
-	const location = useLocation();
-	const { isAuthenticated, isAuthenticating, user, account, logout } = useMoralis();
+	const { isAuthenticated } = useMoralis();
 
-	const logOut = async () => {
-		await logout();
-		console.log("Logged out.");
-	};
-
-	// If the user is not authenticated, they must login by connecting their wallet
-	if (!isAuthenticated) return (<FullscreenLogin />)
-
-	// If the user is authenticated, then they are given the header, which renders every other page using a router
-	else return (
-		<>
-			<Header />
-			<Routes>
-				<Route path="/explore" element={<Explore/>} />
-				<Route path="/merge-room" element={<MergeRoom/>} />
-				<Route path="/all-proposals" element={<ShowProposals/>} />
-				<Route path="*" element={<HomePage />} />
-			</Routes>
-		</>
-	)
+	/* If the user is authenticated, the header is rendered with every other page using a router.
+	 * Note that the <Routes /> tag dosen't acatually render anything, and it's only there to indicate where pages should be
+	 * rendered, which is below the header
+	 */
+	if (isAuthenticated) {
+		return (
+			<>
+				<Header isAuthenticated={ isAuthenticated } />
+				<Routes>
+					<Route path="/explore" element={<Explore/>} />
+					<Route path="/merge-room" element={<MergeRoom/>} />
+					<Route path="/all-proposals" element={<ShowProposals/>} />
+					<Route path="*" element={<HomePage />} />
+				</Routes>
+			</>
+		)
+	
+	/* If the user is not authenticated, then the header is rendered with the isAuthenticated prop passed as the rest of the home page. This way,
+	 * it will not render the menu and the user will be asked to launch the app.
+	 */
+	} else {
+		return (
+			<>
+				<Header isAuthenticated={ isAuthenticated } />
+				<HomePage />
+			</>
+		)
+	}
 };
 
 const App: React.FC = () => (

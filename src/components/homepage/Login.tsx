@@ -30,7 +30,7 @@ function Login() {
 		shape="round"
 		size="large"
 		onClick={ login }
-	>Connect your wallet</Button>
+	>Launch App</Button>
 
 	const logoutButton = <Button
 		key="2"

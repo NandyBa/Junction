@@ -127,21 +127,6 @@
 	height: 600px;
 }
 
-/* Full page login design specifiation */
-
-#fullscreen-login-container {
-	text-align: center;
-	height: 100vh;
-	padding-top: 40vh;
-	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(4,0,65,1) 41%, rgba(5,0,91,1) 100%);
-}
-
-#logo-img-fullscreen-login {
-	width: 100px;
-	height: 100px;
-	margin-bottom: 20px;
-}
-
 /* Animations sourced from the internet */
 
 .hover-underline-animation {
