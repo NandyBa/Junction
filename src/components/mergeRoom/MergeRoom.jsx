@@ -1,10 +1,10 @@
 import React, { useEffect, useState, FC } from 'react';
 import {useNavigate} from 'react-router-dom';
-import '../app/App.css';
+import '../../app/App.css';
 import 'antd/dist/antd.css';
 import { ethers } from "ethers";
 import { useMoralis, useNewMoralisObject } from "react-moralis";
-import SmartInput from '../components/SmartInput';
+import SmartInput from './SmartInput';
 import SelectBlockChain from './SelectBlockchain';
 import { Button, Input, Col, Divider, Row, Alert } from 'antd';
 const { TextArea, Search } = Input;

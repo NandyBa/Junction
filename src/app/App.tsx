@@ -1,13 +1,15 @@
+// Importing 3rd party software
 import React from 'react';
 import { HashRouter, Route, Routes } from 'react-router-dom';
 import { useMoralis } from "react-moralis";
 
 // Importing components
 import Header from '../components/Header'
-import Explore from '../components/Explore'
-import MergeRoom from '../components/MergeRoom'
-import ShowProposals from '../components/ShowProposals'
+import Explore from '../components/explorePage/Explore'
+import MergeRoom from '../components/mergeRoom/MergeRoom'
+import ShowProposals from '../components/proposalsPage/ShowProposals'
 import HomePage from '../components/homepage/HomePage'
+import Footer from '../components/Footer'
 
 const Router = () => {
 	const { isAuthenticated } = useMoralis();
@@ -26,6 +28,7 @@ const Router = () => {
 					<Route path="/all-proposals" element={<ShowProposals/>} />
 					<Route path="*" element={<HomePage />} />
 				</Routes>
+				<Footer />
 			</>
 		)
 	

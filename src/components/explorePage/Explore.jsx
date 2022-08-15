@@ -1,20 +1,25 @@
+// Importing 3rd party components
 import { Space, Table, Tag } from 'antd';
+import Container from 'react-bootstrap/Container'
 import React from 'react';
 
 const columns = [
+	// Column One, the DAO Name
 	{
-    	title: 'DAO name',
-    	dataIndex: 'DAO name',
+    	title: 'DAO Name',
+    	dataIndex: 'DAO Name',
     	key: 'DAO name',
     	render: (text) => <a>{text}</a>,
   	},
+
+	// Column Two, The blockchains the DAO is present in
   	{
     	title: 'Blockchains',
     	key: 'blockchains',
     	dataIndex: 'blockchains',
     	render: (_, { blockchains }) => (
       		<>
-        		{blockchains.map((blockchain) => {
+        		{ blockchains.map((blockchain) => {
           			let color = 'geekblue';
 					switch(blockchain) {
 						case 'Ethereum':
@@ -34,6 +39,8 @@ const columns = [
       		</>
     	),
   	},
+
+	// Column Three, the number of daily users of the DAO/Blockchain
   	{
     	title: 'Daily users',
     	dataIndex: 'Daily users',
@@ -46,31 +53,37 @@ const columns = [
     	key: 'tvl',
     	render: (text) => <span>{text}</span>,
   	},
-];
+]
+
+// Creating the rows of the columns
 const data = [
 	{
   		key: '1',
-    	'DAO name': 'QuickSwap',
-    	blockchains: ['Polygon'],
+    	'DAO Name': 'QuickSwap',
+    	'blockchains': ['Polygon'],
   	},
   	{
   		key: '2',
-    	'DAO name': 'PancakeSwap',
-    	blockchains: ['BNB Chain'],
+    	'DAO Name': 'PancakeSwap',
+    	'blockchains': ['BNB Chain'],
   	},
   	{
   		key: '3',
-    	'DAO name': 'Mai Finance (Qi Dao)',
-    	blockchains: ['BNB Chain', 'Polygon', 'Gnosis Chain'],
+    	'DAO Name': 'Mai Finance (Qi Dao)',
+    	'blockchains': ['BNB Chain', 'Polygon', 'Gnosis Chain'],
   	},
   	{
-  		key:'4',
-  		'DAO name':'',
-  		blockchains: ['BNB Chain', 'Polygon', 'Gnosis Chain'],
-  		TVL: '100M',
+  		key: '4',
+  		'DAO Name':'',
+  		'blockchains': ['BNB Chain', 'Polygon', 'Gnosis Chain'],
+  		'TVL': '100M',
 	}
 ];
 
-const Explore = () => <Table columns={columns} dataSource={data} />;
+const Explore = () => {
+	return (
+		<Table columns={columns} dataSource={data} style={{'margin':'0'}}/>
+	)
+}
 
 export default Explore;

@@ -19,6 +19,12 @@
 	color: #ffffff !important;
 }
 
+/* Global classes for design consistency */
+
+.gradient-background {
+	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(4,0,65,1) 41%, rgba(7,0,117,1) 66%, rgba(7,0,136,1) 100%);
+}
+
 /* Header design specifications */
 
 #header-container {
@@ -26,7 +32,7 @@
 	height: 120px;
 	display: flex;
 	background: rgb(2,0,36);
-	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(4,0,65,1) 41%, rgba(5,0,91,1) 100%);
+	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(4,0,65,1) 41%, rgba(7,0,117,1) 66%, rgba(7,0,136,1) 100%);
 }
 
 	#logo-container {
@@ -82,28 +88,29 @@
 	width: 100%;
 	height: 600px;
 	background: rgb(2,0,36);
-	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(4,0,65,1) 41%, rgba(5,0,91,1) 100%);
+	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(4,0,65,1) 41%, rgba(7,0,117,1) 66%, rgba(7,0,136,1) 100%);
 	padding-left: 80px;
 }
 
 	#section-one-large-text {
 		padding-top: 90px;
-		margin-bottom: 40px;
+		margin-bottom: 15px;
 		max-width: 60%;
 		font-size: 50px;
 		color: #ffffff;
+	}
+
+	#section-one-small-text {
+		font-size: 28px;
+		font-weight: lighter;
+		color: white;
+		margin-bottom: 40px;
 	}
 
 	#get-started-btn {
 		background-color: #05005b !important;
 		border-color: #ffffff !important;
 		color: #ffffff !important;
-	}
-
-	.ant-btn-primary:hover {
-		background-color: #ffffff !important;
-		border-color: #ffffff !important;
-		color: #05005b !important;
 	}
 
 	#buy-mdt-btn {
@@ -124,10 +131,130 @@
 #section-two {
 	background: white;
 	width: 100vw;
-	height: 600px;
+	height: 700px;
+}
+
+	#s2-title-container {
+		margin-top: 150px;
+		margin-bottom: 60px;
+		width: 100%;
+		text-align: center;
+	}
+
+	#s2-title-text {
+		font-size: 34px;
+		font-weight: bolder;
+		align-self: center;
+	}
+
+	.s2-box {
+		margin-top: 50px;
+		text-align: center;
+		border-radius: 5%;
+		border: 1px solid rgb(215, 215, 215);
+		box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+		padding-bottom: 40px;
+		transition: all .5s ease-in-out;
+	}
+
+	.s2-box:hover {
+		margin-top: 40px;
+	}
+
+	.s2-image {
+		width: 70%;
+	}
+
+	.s2-text {
+		font-size: 22px;
+	}
+
+/* Transition between section two and section three */
+
+#st-overlay {
+	width: 100%;
+	height: 200px;
+	border-radius: 50%;
+	background-color: white;
+
+	z-index: initial;
+}
+
+#st-underlay {
+	width: 100%;
+	height: 100px;
+	background-color: #d97c00;
+	
+	position: relative;
+	z-index: -1;
+}
+
+/* Section three (homepage) design specifications */
+
+#s3-container {
+	width: 100%;
+	background-color: #d97c00;
+	height: 1000px;
+}
+
+	#s3-title-text {
+		font-size: 35px;
+		font-weight: bolder;
+		color: white;
+		max-width: 70%;
+		margin-top: 90px;
+	}
+
+	.s3-box {
+		background-color: #fff1df;
+		border-radius: 8%;
+		box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
+		transition: all .5s ease-in-out;
+		padding: 60px;
+		min-width: 785px;
+		height: 620px;
+	}
+
+		#s3-medal-container {
+			display: flex;
+			height: 30%;
+			width: 100%;
+		}
+
+			#s3-medal-icon {
+				height: 100%;
+			}
+
+			#s3-medal-text {
+				padding-left: 40px;
+				padding-top: 25px;
+				font-weight: light;
+				font-size: 30px;
+			}
+
+		#s3-text-container {
+			padding-top: 50px;
+			height: 70%;
+		}
+
+/* Footer */
+
+#footer-line {
+	height: 1px;
+	background: #cab191;
+
+	margin-right: 40px;
+	margin-left: 40px;
+}
+
+#footer-container {
+	height: 120px;
+	background: #d97c00;
 }
 
 /* Animations sourced from the internet */
+
+/* Hover line animation for main menu */
 
 .hover-underline-animation {
 	display: inline-block;
